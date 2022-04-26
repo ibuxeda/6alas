@@ -1,12 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitio 6Alas</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h1>Armando Sitio 6Alas</h1>
+    <div class="cabecera">
+        <a href="index.html">
+            <img src="images/logo_3alas.png" alt="Ir al inicio">
+        </a>
+        <h1 class="cabecera-titulo">The Energy Factory</h1>
+    </div><!-- Acá cierra .cabecera -->
+
+    <div class="contenido">
+        <!-- nav es una etiqueta semántica, significa que es un bloque de navegación -->
+        <nav class="nav">
+            <ul class="nav-lista">
+                <li class="nav-lista_item">
+                    <a href="index.html" class="nav-lista_item-link">
+                        Empresa
+                    </a>
+                </li>
+                <li class="nav-lista_item">
+                    <a href="index.html" class="nav-lista_item-link">
+                        Productos
+                    </a>
+                </li>
+                <li class="nav-lista_item">
+                    <a href="index.html" class="nav-lista_item-link">
+                        Servicios
+                    </a>
+                </li>
+                <li class="nav-lista_item">
+                    <a href="index.html" class="nav-lista_item-link">
+                        Clientes
+                    </a>
+                </li>
+                <li class="nav-lista_item">
+                    <a href="index.html" class="nav-lista_item-link">
+                        Garantía
+                    </a>
+                </li>
+                <li class="nav-lista_item">
+                    <a href="index.html" class="nav-lista_item-link">
+                        Contacto
+                    </a>
+                </li>
+            </ul><!-- Acá cierra .nav-lista -->
+            <form action="buscar.js" class="nav-form">
+                <!-- Ojo que acá hay un issue de accesibilidad, más adelante vemos cómo arreglarlo -->
+                <input type="text" placeholder="Buscar en el sitio">
+                <input type="submit" value="Buscar">
+            </form>
+        </nav><!-- Acá cierra .nav -->
+
+        Este es el contenido principal
+    </div><!-- Acá cierra .contenido -->
 </body>
 </html>

@@ -1,0 +1,125 @@
+/* Reset de CSS
+    eliminan algunos o TODOS los estilos predeterminados del navegador
+    Otros reset:
+    1. El famoso de Eric Meyer: https://meyerweb.com/eric/tools/css/reset/
+    2. El "moderno": https://piccalil.li/blog/a-modern-css-reset/
+    * es un selector universal, selecciona a todas las etiquetas del HTML
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Declaramos la variables en la raíz del documento para poder usarlas en todo el proyecto */
+:root {
+    /* Nombramos a las variables con --nombre y les asignamos un valor */
+    --naranja: #F90;
+    --negro: #000;
+    --grisOscuro: #333;
+    --blanco: #fff;
+}
+
+body {
+    /* background-image necesita la ruta de la imagen
+        de manera automática repite la imagen en todo el sitio
+        si quiero que no se repita uso background-repeat:
+            - no-repeat: no se repite, queda en esquina superior izquierda
+            - repeat-x: eje x solamente
+            - repeat-y: eje y solamente
+        si quiero que cubra todo el fondo sin romper proporción
+            background-size: cover;
+    */
+    background-image: url("images/pattern.jpg");
+    /* Para usar la variable se usa la palabra mágica "var" y entre () el nombre de la variable con -- */
+    background-color: var(--grisOscuro);
+    /* Este font-family se aplicará a toda la página */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/*
+    ------------ CABECERA ------------
+*/
+
+.cabecera,
+.contenido {
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.cabecera {
+    /* background-color: tomato; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cabecera-titulo {
+    color: var(--naranja);
+    /* font-family: 'Courier New', Courier, monospace; */
+}
+
+
+
+
+/*
+    ------------ CONTENIDO ------------
+*/
+
+.contenido {
+    background-color: chocolate;
+}
+
+
+
+
+/*
+    ------------ NAVEGACIÓN ------------
+*/
+
+.nav {
+    background-color: var(--naranja);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    padding-left: 40px;
+}
+
+.nav-lista {
+    /* background-color: olive; */
+    flex-grow: 1;
+    list-style: none;
+    display: flex;
+}
+
+/* .nav-lista_item {
+    background-color: orangered;
+} */
+
+.nav-lista_item-link {
+    /* background-color: aquamarine; */
+    border-right: 1px solid purple;
+    display: block;
+    /*
+        5px corresponde a top y bottom
+        12px corresponde a right y left
+    */
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--blanco);
+}
+.nav-lista_item-link:hover {
+    /* background-color: darkorange; */
+    text-decoration: underline;
+}
+
+/* .nav-form {
+    background-color: darkblue;
+} */
